@@ -5,7 +5,7 @@
 Makes plot of jackknife deviance residuals against linear predictor, normal scores plots of standardized deviance residuals, plot of approximate Cook statistics against leverage/(1-leverage), and case plot of Cook statistic.
 }
 \usage{
-plot.glm.diag(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, labels = NULL, ret = FALSE, \dots)
+plot.glm.diag(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, labels = NULL, ret = FALSE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -15,7 +15,7 @@ plot.glm.diag(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, labels = NU
   \item{iden}{ A logical argument. If \code{TRUE} then, after the plots are drawn, the user will be prompted for an integer between 0 and 4. A positive integer will select a plot and invoke \code{identify()} on that plot. After exiting \code{identify()}, the user is again prompted, this loop continuing until the user responds to the prompt with 0. If \code{iden} is \code{FALSE} (default) the user cannot interact with the plots.}
   \item{labels}{A vector of labels for use with \code{identify()} if \code{iden} is \code{TRUE}. If it is not supplied then the labels are derived from \code{x}. }
   \item{ret}{A logical argument indicating if \code{glmdiag} should be returned. The default is \code{FALSE}.}
-  \item{\dots}{Additional graphics parameters.}
+  \item{...}{Other arguments, which are ignored.  This is included only for compatibility with S3 methods.}
 }
 \details{
 The plot on the top left is a plot of the jackknife deviance residuals against the fitted values.
@@ -29,7 +29,7 @@ The plot on the top left is a plot of the jackknife deviance residuals against t
  Use of \code{iden=T} is encouraged for proper exploration of these four plots as a guide to how well the model fits the data and whether certain observations have an unduly large effect on parameter estimates.}
 \value{
 If ret is \code{TRUE} then the value of \code{glmdiag} is returned otherwise there is no returned value.}
-\references{ Davison, A.C. and Snell, E.J. (1991) Residuals and diagnostics. In  \emph{Statistical Theory and Modelling: In Honour of Sir David Cox}.  D.V. Hinkley, N. Reid, and E.J. Snell (editors), 83Ð106. Chapman and Hall. }
+\references{ Davison, A.C. and Snell, E.J. (1991) Residuals and diagnostics. In  \emph{Statistical Theory and Modelling: In Honour of Sir David Cox}.  D.V. Hinkley, N. Reid, and E.J. Snell (editors), 83-106. Chapman and Hall. }
 \author{ Angelo Canty }
 \seealso{\code{\link{glm}},\code{\link{glm.diag}},\code{\link{identify}} }
 \examples{  # leukaemia data

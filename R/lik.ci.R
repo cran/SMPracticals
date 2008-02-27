@@ -1,7 +1,6 @@
 "lik.ci" <-
 function(psi, logL, conf=c(0.975,0.025))
 {
-#  library(modreg) 
   fit <- smooth.spline(psi, logL)
   p <- predict(fit, psi, deriv=1)
   psihat <- predict(smooth.spline(p$y, p$x), 0)$y

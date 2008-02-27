@@ -18,7 +18,7 @@ A list containing the following items:
 \item{ h}{The vector of leverages of the observations.}
 \item{sd}{The value used to standardize the residuals. This is the the estimate of residual standard deviation in the Gaussian family and is the square root of the estimated shape parameter in the Gamma family. In all other cases it is 1.}
 }
-\references{ Davison, A.C. and Snell, E.J. (1991) Residuals and diagnostics. In \emph{Statistical Theory and Modelling: In Honour of Sir David Cox}. D.V. Hinkley, N. Reid and E.J. Snell (editors), 83Ð106. Chapman and Hall.}
+\references{ Davison, A.C. and Snell, E.J. (1991) Residuals and diagnostics. In \emph{Statistical Theory and Modelling: In Honour of Sir David Cox}. D.V. Hinkley, N. Reid and E.J. Snell (editors), 83-106. Chapman and Hall.}
 \author{ Anthony Davison <anthony.davison@epfl.ch> }
 \note{ See the helpfile for \code{glm.diag.plots} for an example of the use of \code{glm.diag}. }
 

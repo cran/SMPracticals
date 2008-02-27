@@ -46,6 +46,7 @@ unavailable.
 }
 
 \examples{
+library(ellipse)
 data(mathmarks)
 pairs.mod(mathmarks)
 }

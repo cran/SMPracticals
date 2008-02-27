@@ -11,8 +11,7 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
   ##   o C = Conditional
   ##
   ## Local functions
-  library(ellipse)
-  doaxis <- function(which, axp, visible, labelnames, srt)
+    doaxis <- function(which, axp, visible, labelnames, srt)
     {
       if(visible && (!is.null(labelnames)))
         visible <- labelnames
@@ -37,47 +36,47 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
       xl <- xr
       }
     }
-  marginal.diag.plot <- function(X.mean.centered, x,
+  marginal.diag.plot <- function(x.mean.centered, x,
                                  highlight, highlight.char,
                                  i, j, level, format, ...)
     {
-    if(format=="MM") X.mean.centered <- x
+    if(format=="MM") x.mean.centered <- x
     if(!is.null(highlight))
       {
-      points(as.vector(X.mean.centered[-highlight, j]),
-             as.vector(X.mean.centered[-highlight, i]), ...)
+      points(as.vector(x.mean.centered[-highlight, j]),
+             as.vector(x.mean.centered[-highlight, i]), ...)
       for(ihl in 1:length(highlight))
         {
-        points(as.vector(X.mean.centered[highlight[ihl], j]),
-               as.vector(X.mean.centered[highlight[ihl], i]),
+        points(as.vector(x.mean.centered[highlight[ihl], j]),
+               as.vector(x.mean.centered[highlight[ihl], i]),
                pch=highlight.char[ihl], ...)
         }
       }
       else
         {
-        points(as.vector(X.mean.centered[, j]),
-               as.vector(X.mean.centered[, i]), ...)
+        points(as.vector(x.mean.centered[, j]),
+               as.vector(x.mean.centered[, i]), ...)
         }
     if(format=="MM")
-      lines(ellipse(var(as.matrix(X.mean.centered[,c(j,i)])), 
-                    centre=c(mean(X.mean.centered[, j]),
-                      mean(X.mean.centered[, i])),
+      lines(ellipse(var(as.matrix(x.mean.centered[,c(j,i)])), 
+                    centre=c(mean(x.mean.centered[, j]),
+                      mean(x.mean.centered[, i])),
                     level=level), lty=2)
     else
-      lines(ellipse(var(as.matrix(X.mean.centered[,c(j,i)])), 
+      lines(ellipse(var(as.matrix(x.mean.centered[,c(j,i)])), 
                     level=level), lty=2)
     par(lty=1)
-    cor.ij <- round(cor(X.mean.centered[, j],
-                        X.mean.centered[, i]),2)
+    cor.ij <- round(cor(x.mean.centered[, j],
+                        x.mean.centered[, i]),2)
     if(cor.ij >= 0)
-      text(min(X.mean.centered[, j]), max(X.mean.centered[, i]),
+      text(min(x.mean.centered[, j]), max(x.mean.centered[, i]),
            paste(as.character(cor.ij)), col=1)
       else
-        text(min(X.mean.centered[, j]), min(X.mean.centered[, i]),
+        text(min(x.mean.centered[, j]), min(x.mean.centered[, i]),
              paste(as.character(cor.ij)), col=1)
     }
   conditional.diag.plot <- function(x, i, j, highlight, highlight.char,
-                                    X.mean.centered, level, ...)
+                                    x.mean.centered, level, ...)
     {
     fit.added.ij <- lm.fit(cbind(1,as.matrix(x[,-c(i,j)])),
                               as.matrix(x[,c(i,j)]), method = "qr")
@@ -104,10 +103,10 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
     par.cor.ij <- round(cor(as.vector(fit.added.ij$residuals[,2]),
                             as.vector(fit.added.ij$residuals[,1])),2)
     if(par.cor.ij >= 0)
-      text(min(X.mean.centered[,j]), max(X.mean.centered[,i]),
+      text(min(x.mean.centered[,j]), max(x.mean.centered[,i]),
            paste(as.character(par.cor.ij)), col=1)
       else
-        text(min(X.mean.centered[,j]), min(X.mean.centered[,i]),
+        text(min(x.mean.centered[,j]), min(x.mean.centered[,i]),
              paste(as.character(par.cor.ij)), col=1)
     }
   ## Start
@@ -125,14 +124,14 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
 	par(mfrow = c(p, p), mgp = c(2, 0.8, 0), oma = rep(3, 4), mar = rep(0.5, 4), tck = -0.03/p, pty="s")
 	on.exit({par(oldpar)})
   ##par(cex = CEX, err=-1)
-  X.mean.centered <- t(t(x)-apply(x,2,mean))
+  x.mean.centered <- t(t(x)-apply(x,2,mean))
   xrange <- list()
   options(warn=-1)
   ## Start loop
   ##-----------
   ## 1- Get the range for the plots.
   ## Requires calculating all the residuals once
-  for(i in 1:p) xrange[[i]] <- range(X.mean.centered[,i], na.rm =TRUE)
+  for(i in 1:p) xrange[[i]] <- range(x.mean.centered[,i], na.rm =TRUE)
   for(i in 2:p)
     {
 		for(j in 1:(i-1))
@@ -171,20 +170,20 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
         if(j < i)
           {
           if((format=="MC") || (format=="MM"))
-            marginal.diag.plot(X.mean.centered, x, 
+            marginal.diag.plot(x.mean.centered, x, 
                                highlight, highlight.char,
                                i, j, level, format, ...)
             else 
               conditional.diag.plot(x, i, j, highlight, highlight.char,
-                                    X.mean.centered, level, ...)
+                                    x.mean.centered, level, ...)
           }
           else
             {
             if((format=="MC") || (format=="CC"))
               conditional.diag.plot(x, i, j, highlight, highlight.char,
-                                    X.mean.centered, level, ...)
+                                    x.mean.centered, level, ...)
             else
-              marginal.diag.plot(X.mean.centered, x,
+              marginal.diag.plot(x.mean.centered, x,
                                  highlight, highlight.char,
                                  i, j, level, format, ...)
             }
@@ -201,8 +200,8 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
           fit.i <- lm.fit(cbind(1,as.matrix(x[,-c(i)])),
                              as.vector(x[,i]), method = "qr")
           ##
-          Xmc <- t(t(x)-apply(x,2,mean))
-          Omega.hat <- t(Xmc) %*% Xmc/(nrow(x)-1)
+          xmc <- t(t(x)-apply(x,2,mean))
+          Omega.hat <- t(xmc) %*% xmc/(nrow(x)-1)
           par.mean.var.i <- sqrt(c(var(x[,i]),
                                    var(fit.i$residuals)))
           fit.i.res <- fit.i$residuals+mean(x[,i])

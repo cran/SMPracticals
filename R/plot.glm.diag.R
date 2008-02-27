@@ -2,9 +2,8 @@
 function (x, glmdiag = glm.diag(x), subset = NULL, 
     iden = FALSE, labels = NULL, ret = FALSE, ...) 
 {
-    glmfit <- x
     if (is.null(glmdiag)) 
-        glmdiag <- glm.diag(glmfit)
+        glmdiag <- glm.diag(x)
     if (is.null(subset)) 
         subset <- c(1:length(glmdiag$h))
     else if (is.logical(subset)) 
@@ -17,7 +16,7 @@ function (x, glmdiag = glm.diag(x), subset = NULL,
         subset <- seq(along = subset)
     }
     par(mfrow = c(2, 2))
-    x1 <- predict(glmfit)
+    x1 <- predict(x)
     plot(x1, glmdiag$res, xlab = "Linear predictor", ylab = "Residuals")
     pars <- vector(4, mode = "list")
     pars[[1]] <- par("usr")
@@ -30,8 +29,8 @@ function (x, glmdiag = glm.diag(x), subset = NULL,
     plot(hh, glmdiag$cook, xlab = "h/(1-h)", ylab = "Cook statistic")
     rx <- range(hh)
     ry <- range(glmdiag$cook)
-    rank.fit <- glmfit$rank
-    nobs <- rank.fit + glmfit$df.residual
+    rank.fit <- x$rank
+    nobs <- rank.fit + x$df.residual
     cooky <- 8/(nobs - 2 * rank.fit)
     hy <- (2 * rank.fit)/(nobs - 2 * rank.fit)
     if ((cooky >= ry[1]) && (cooky <= ry[2])) 

@@ -21,13 +21,14 @@ USA, for the years 1959-1961.  Some of the variables are highly collinear.
     \item{dens}{Population per square mile in urbanized areas, 1960}
     \item{nonw}{Percentage non-white population in urbanized areas, 1960}
     \item{wwdrk}{Percentage  employed in white collar occupations}
-    \item{poor}{Percentage  of families with income < \$3000}
+    \item{poor}{Percentage  of families with income < 3000 dollars}
     \item{hc}{Relative hydrocarbon pollution potential}
     \item{nox}{Same for nitric oxides}
     \item{so}{Same for sulphur dioxide}
     \item{humid}{Annual average percentage relative humidity at 1pm}
     \item{mort}{Total age-adjusted mortality rate per 100,000}
   }
+}
 }
 \source{
 McDonald, G. C. and Schwing, R. C. (1973) Instabilities of regression
