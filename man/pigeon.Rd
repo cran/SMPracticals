@@ -18,9 +18,9 @@ release, and on vanishing from sight.
 }
 
 \source{
-Artes, R. (1997) Extens\~{o}es da Teoria das Equa\c{c}\~{o}es de
-  Estima\c{c}\~{a}o Generalizadas a Dados Circulares e Modelos de
-  Dispers\~{a}o. Ph.D. thesis, University of S\~{a}o Paulo.
+Artes, R. (1997) Extensoes da Teoria das Equacoes de
+  Estimacao Generalizadas a Dados Circulares e Modelos de
+  Dispersao. Ph.D. thesis, University of Sao Paulo.
 }
 \references{
 Davison, A. C. (2003)  \emph{Statistical Models}.  Cambridge University Press. Page 173.

@@ -29,7 +29,6 @@ USA, for the years 1959-1961.  Some of the variables are highly collinear.
     \item{mort}{Total age-adjusted mortality rate per 100,000}
   }
 }
-}
 \source{
 McDonald, G. C. and Schwing, R. C. (1973) Instabilities of regression
 estimates relating air pollution to mortality, \emph{Technometrics}, \bold{15}, 463-482.

@@ -12,7 +12,7 @@ for commercial reasons.
   An irregular time series.
 }
 \source{
-Embrechts, P., Kl{\"u}ppelberg, C. and Mikosch, T. (1997) 
+Embrechts, P., Kluppelberg, C. and Mikosch, T. (1997) 
 \emph{Modelling Extremal Events for Insurance and Finance}.
 Berlin: Springer.
 }

@@ -20,7 +20,6 @@ regression relationship from censored data.  Part 1 --- simple methods
 and their application (with Discussion).  \emph{Technometrics}, \bold{14}, 247--276.
 }
 
-}
 \references{
 Davison, A. C. (2003)  \emph{Statistical Models}.  Cambridge University Press.
 Page 615.}

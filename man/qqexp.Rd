@@ -12,7 +12,6 @@ qqexp(y, line = FALSE, ...)
   \item{line}{Add line to plot (no line by default)}
   \item{\dots}{Other options for plot command}
 }
-}
 \value{
   A exponential probablity plot of the data in y; that is, a plot of
 the ordered values of y against the quantiles of the standard exponential
