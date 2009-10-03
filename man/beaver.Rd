@@ -14,7 +14,7 @@ went outside.
   \describe{
     \item{day}{Day number}
     \item{time}{Time of day (hhmm)}
-    \item{temp}{Body temperature ($^\circ$C)}
+    \item{temp}{Body temperature (degrees Celsius)}
     \item{activ}{Indicator of activity outside the lodge}
   }
 }

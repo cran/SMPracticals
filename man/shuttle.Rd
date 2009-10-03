@@ -13,7 +13,7 @@ pressure at which tests on the putty next to the rings were performed.
   \describe{
     \item{m}{Number of rings}
     \item{r}{Number of rings showing thermal distress}
-    \item{temperature}{ambient temperature ($^\circ$F)}
+    \item{temperature}{ambient temperature (degrees Fahrenheit)}
     \item{pressure}{pressure (pounds per square inch)}
   }
 }

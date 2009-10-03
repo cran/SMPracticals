@@ -44,10 +44,9 @@ Sylvain Sardy (Sylvain.Sardy@epfl.ch)
 pairs.mod calls library(ellipse) and will give an error if this is
 unavailable.
 }
-
 \examples{
 library(ellipse)
 data(mathmarks)
 pairs.mod(mathmarks)
 }
-\keyword{ hplot }% at least one, from doc/KEYWORDS
+\keyword{ hplot }
