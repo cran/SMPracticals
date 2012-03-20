@@ -8,7 +8,7 @@ the diagonal show scatterplots of residuals after regression on all
 the other variables.   
 }
 \usage{
-pairs.mod(x, format = "MC", labelnames = names(x), highlight = NULL, level = 0.9, ...)
+\method{pairs}{mod}(x, format = "MC", labelnames = names(x), highlight = NULL, level = 0.9, ...)
 }
 \arguments{
   \item{x}{A matrix whose rows correspond to units and whose columns

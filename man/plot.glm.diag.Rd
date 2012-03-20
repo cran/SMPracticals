@@ -5,7 +5,7 @@
 Makes plot of jackknife deviance residuals against linear predictor, normal scores plots of standardized deviance residuals, plot of approximate Cook statistics against leverage/(1-leverage), and case plot of Cook statistic.
 }
 \usage{
-plot.glm.diag(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, labels = NULL, ret = FALSE, ...)
+\method{plot}{glm.diag}(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, labels = NULL, ret = FALSE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -33,6 +33,7 @@ If ret is \code{TRUE} then the value of \code{glmdiag} is returned otherwise the
 \author{ Angelo Canty }
 \seealso{\code{\link{glm}},\code{\link{glm.diag}},\code{\link{identify}} }
 \examples{  # leukaemia data
+require(MASS)
 data(leuk, package="MASS")
 leuk.mod <- glm(time~ag-1+log10(wbc),family=Gamma(log),data=leuk)
 leuk.diag <- glm.diag(leuk.mod)

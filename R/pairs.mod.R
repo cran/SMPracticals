@@ -18,7 +18,7 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
       at <- if(!is.null(labelnames))
         seq(axp[1] + 1, axp[2] - 1, length = length(labelnames))
       else seq(axp[1], axp[2], length = axp[3] + 1)
-      axis(which, at = round(at, dig = 2), outer =TRUE, line = -0.5, 
+      axis(which, at = round(at, digits = 2), outer =TRUE, line = -0.5, 
            labelnames = visible, srt = srt)
 	}
   add.hist <- function(vector, hist.intensities, hist.breaks)

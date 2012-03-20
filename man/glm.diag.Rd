@@ -4,7 +4,7 @@
 \description{
 Calculates jackknife deviance residuals, standardized deviance residuals, standardized Pearson residuals, approximate Cook statistic, leverage and estimated dispersion.}
 \usage{
-glm.diag(glmfit)
+\method{glm}{diag}(glmfit)
 }
 \arguments{
   \item{glmfit}{ \code{glmfit} is a \code{glm.object} - the result of a call to \code{glm()} }
