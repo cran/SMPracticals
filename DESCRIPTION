@@ -1,5 +1,5 @@
 Package: SMPracticals
-Version: 1.4-1
+Version: 1.4-2
 Date: 2012-03-20
 Title: Practicals for use with Davison (2003) Statistical Models
 Author: Anthony Davison <Anthony.Davison@epfl.ch>
@@ -15,6 +15,6 @@ License: GPL (>= 2)
 URL: http://statwww.epfl.ch/davison/SM/
 LazyLoad: yes
 LazyData: yes
-Packaged: 2012-03-20 10:35:29 UTC; brazzale
+Packaged: 2013-01-15 16:55:11 UTC; ripley
 Repository: CRAN
-Date/Publication: 2012-03-20 11:53:01
+Date/Publication: 2013-01-15 17:57:22

@@ -24,13 +24,13 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
   add.hist <- function(vector, hist.intensities, hist.breaks)
     {
     hist.out <- hist(vector, probability=TRUE, plot=FALSE, breaks=hist.breaks)
-    n <- length(hist.out$intensities)
+    n <- length(hist.out$density)
     xl <- hist.breaks[1]
     for(i in 1:n)
       {
       xr <- hist.breaks[i+1]
       delta <- (xr-xl)*.3
-      height <- hist.out$intensities[i]
+      height <- hist.out$density[i]
       if(height>0) polygon(c(xl+delta,xl+delta,xr-delta,xr-delta),
                            c(0,height,height,0), col=1)
       xl <- xr
@@ -211,7 +211,7 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
                                           max(fit.i.res)))
           hist.res.i <- hist(fit.i.res,
                              probability=TRUE, plot=FALSE, breaks=breaks)
-          ylim <- c(0, max(c(hist.i$intensities, hist.res.i$intensities)))
+          ylim <- c(0, max(c(hist.i$density, hist.res.i$density)))
           xlim <- range(breaks)
           xlab <- labelnames[i]
           if((format!="CC") && (format!="MM"))
@@ -235,7 +235,7 @@ function(x, format="MC", labelnames=names(x), highlight=NULL, level=.9, ...)
               }
           if((format != "MM") && (format != "CC"))
             add.hist(fit.i$residuals+mean(x[,i]),
-                     hist.intensities=hist.i$intensities, hist.breaks=breaks)
+                     hist.intensities=hist.i$density, hist.breaks=breaks)
           if((format=="MC"))
             {
             par(adj=0)
