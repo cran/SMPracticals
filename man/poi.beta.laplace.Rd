@@ -8,7 +8,8 @@ of the parameter beta in a Poisson regression model.  For more details see
 Practical 11.2 of Davison (2003).
 }
 \usage{
-poi.beta.laplace(data, alpha = get.alpha(data), phi = 1, nu = 0.1, beta = seq(from = 0, to = 7, length = 1000))
+poi.beta.laplace(data, alpha = get.alpha(data), phi = 1, nu = 0.1, 
+                 beta = seq(from = 0, to = 7, length = 1000))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

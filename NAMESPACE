@@ -6,6 +6,18 @@ exportPattern(".")
 
 # Import all packages listed as Imports or Depends
 import(
-  ellipse
+  ellipse, MASS, nlme, survival
+)
+importFrom("graphics", 
+  "abline", "axis", "box", "hist", "identify", "lines",  "par", "plot", 
+  "points", "polygon", "text"
+)
+importFrom("stats", 
+  "cor", "dbeta", "dexp", "dgamma", "dnorm", "dpois", "lm.fit", 
+  "lm.influence", "optim", "ppoints", "predict", "qexp", "qnorm", "qqplot", 
+  "residuals", "rexp", "rgamma", "rnorm", "runif", "smooth.spline", "var"
 )
 
+# Define S3 methods
+S3method(pairs, mod)
+S3method(plot, glm.diag)

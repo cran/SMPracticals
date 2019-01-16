@@ -1,5 +1,5 @@
-9322cdee1fc0a4021138dee4672096a6 *DESCRIPTION
-8776e9af861ab4bbe0f1cf8e0fd78dc6 *NAMESPACE
+d8478abc47b3ca185c4be77829845e94 *DESCRIPTION
+e10015bfdba9e0f44a1747f2bb24adbf *NAMESPACE
 0c2c91b5cca1f3842d691c202a46dfa8 *R/MClik.R
 d6617fb1e15d601dcc12a550fdac9479 *R/add.exp.lines.R
 fee37ae35f9a845b7e9a5839ea6b0341 *R/beaver.gibbs.R
@@ -160,9 +160,9 @@ b3ad0bbca885beaab2d923b7b6679011 *man/paulsen.Rd
 7497607100704c1b3ea6c7c31dcc9708 *man/pigeon.Rd
 52d00c6f77157f6a6f99737ed22c65a5 *man/pigs.Rd
 4157e6419452f6532ec32b0a7e9f3dc2 *man/pipette.Rd
-98b20db3af2a897949d3b5659f33443d *man/plot.glm.diag.Rd
+1b18e4c108efef588fddf816ac5fd041 *man/plot.glm.diag.Rd
 edbcae974657cf18580db2c4ce003a0a *man/pneu.Rd
-08b676f51085210e4f623904f08a367d *man/poi.beta.laplace.Rd
+79488e9fd0fd3cf0694501c213967164 *man/poi.beta.laplace.Rd
 20506861473d8332df7612c84e398466 *man/poi.gibbs.Rd
 7e85d4b186c743b393aba07df896d493 *man/poisons.Rd
 d60e211dd63db5b2f3fc7f7ab6a896ed *man/pollution.Rd

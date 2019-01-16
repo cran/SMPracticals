@@ -5,7 +5,8 @@
 Makes plot of jackknife deviance residuals against linear predictor, normal scores plots of standardized deviance residuals, plot of approximate Cook statistics against leverage/(1-leverage), and case plot of Cook statistic.
 }
 \usage{
-\method{plot}{glm.diag}(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, labels = NULL, ret = FALSE, ...)
+\method{plot}{glm.diag}(x, glmdiag = glm.diag(x), subset = NULL, iden = FALSE, 
+                        labels = NULL, ret = FALSE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
