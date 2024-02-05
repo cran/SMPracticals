@@ -1,4 +1,4 @@
-d8478abc47b3ca185c4be77829845e94 *DESCRIPTION
+8bb68ddac74e3a00fad5d7a0d88e1f85 *DESCRIPTION
 e10015bfdba9e0f44a1747f2bb24adbf *NAMESPACE
 0c2c91b5cca1f3842d691c202a46dfa8 *R/MClik.R
 d6617fb1e15d601dcc12a550fdac9479 *R/add.exp.lines.R
@@ -6,12 +6,12 @@ fee37ae35f9a845b7e9a5839ea6b0341 *R/beaver.gibbs.R
 04573513244e44d4c4f78db61a694528 *R/coin.spin.R
 a88489d8713bae0b4e9f3825dd1ace85 *R/exp.gibbs.R
 86a8373636a92475dee725c0f9e3c0ec *R/get.alpha.R
-fa69751264c796b6cc400b82bc80194a *R/glm.diag.R
+fe9443c7ccc24f7ee2b15cbd4cade401 *R/glm.diag.R
 8492b6acda2cdd6705d64e5bc925f2d5 *R/hus.gibbs.R
 5392f83917a70787cd5da2963c9fdb6c *R/ihess.R
 77b8d16a4fe4d0cab3e26118381d6ca7 *R/lik.ci.R
 5a88e96ffa967ef78c09b3378327732a *R/pairs.mod.R
-a122aedca22b26497992bc29e7c1a075 *R/plot.glm.diag.R
+188a68975c123b076e47eb12efb5bf05 *R/plot.glm.diag.R
 0a798f955b3e2a4157e49d70df410547 *R/poi.beta.laplace.R
 e247cbeed91e0a58c84b64f75b6fbcc3 *R/poi.gibbs.R
 e8376bd1ee2c7b7342883e8ca06c13b8 *R/qqexp.R
@@ -131,7 +131,7 @@ eb35f60cfc80188637ae73d644e89733 *man/forbes.Rd
 ab1e823f3c9c47c1e03646602fe09d58 *man/ftse.Rd
 cf648791ed8e9d143065ea5fd262dabe *man/galaxy.Rd
 1038efc0c336744d6d25d070af03a49f *man/get.alpha.Rd
-74862a902ddec58eddfed4f06961a79d *man/glm.diag.Rd
+20b9ff0eb11e06705aa987eab703d9ac *man/glm.diag.Rd
 3dc0c43906fac19fb5a10a0e8aef67e8 *man/hus.Rd
 e681a00791f6f2efe9f8867345b55abb *man/hus.gibbs.Rd
 ee04e3a4a4a82a363343851b14799bc9 *man/ihess.Rd
@@ -160,7 +160,7 @@ b3ad0bbca885beaab2d923b7b6679011 *man/paulsen.Rd
 7497607100704c1b3ea6c7c31dcc9708 *man/pigeon.Rd
 52d00c6f77157f6a6f99737ed22c65a5 *man/pigs.Rd
 4157e6419452f6532ec32b0a7e9f3dc2 *man/pipette.Rd
-1b18e4c108efef588fddf816ac5fd041 *man/plot.glm.diag.Rd
+4fb06730b613a14a184adbde9dd80dd7 *man/plot.glm.diag.Rd
 edbcae974657cf18580db2c4ce003a0a *man/pneu.Rd
 79488e9fd0fd3cf0694501c213967164 *man/poi.beta.laplace.Rd
 20506861473d8332df7612c84e398466 *man/poi.gibbs.Rd

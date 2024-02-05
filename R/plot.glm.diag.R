@@ -21,8 +21,8 @@ function (x, glmdiag = glm.diag(x), subset = NULL,
     pars <- vector(4, mode = "list")
     pars[[1]] <- par("usr")
     y2 <- glmdiag$rd
-    x2 <- qnorm(ppoints(length(y2)))[rank(y2)]
-    plot(x2, y2, ylab = "Quantiles of standard normal", xlab = "Ordered deviance residuals")
+    x2 <- qnorm(ppoints(length(y2)))[rank(y2)]  # ARB
+    plot(x2, y2, xlab = "Quantiles of standard normal", ylab = "Ordered deviance residuals")
     abline(0, 1, lty = 2)
     pars[[2]] <- par("usr")
     hh <- glmdiag$h/(1 - glmdiag$h)

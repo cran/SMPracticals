@@ -4,7 +4,9 @@ function (glmfit)
     if (is.null(glmfit$prior.weights)) 
         w <- rep(1, length(glmfit$residuals))
     else w <- glmfit$prior.weights
-    sd <- sqrt(summary(glmfit)$dispersion)
+    sd = ifelse((class(glmfit) == "lm")[1],
+      summary(glmfit)$sigma, sqrt(summary(glmfit)$dispersion))  
+#    sd <- sqrt(summary(glmfit)$dispersion)
     dev <- residuals(glmfit, type = "deviance")/sd
     pear <- residuals(glmfit, type = "pearson")/sd
     h <- rep(0, length(w))

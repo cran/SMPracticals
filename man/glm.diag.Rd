@@ -7,7 +7,7 @@ Calculates jackknife deviance residuals, standardized deviance residuals, standa
 \method{glm}{diag}(glmfit)
 }
 \arguments{
-  \item{glmfit}{ \code{glmfit} is a \code{glm.object} - the result of a call to \code{glm()} }
+  \item{glmfit}{ \code{glmfit} is a \code{glm.object} or a \code{lm.object} - the result of a call to \code{glm()} or \code{lm()} }
 }
 \value{
 A list containing the following items:
@@ -22,5 +22,5 @@ A list containing the following items:
 \author{ Anthony Davison <anthony.davison@epfl.ch> }
 \note{ See the helpfile for \code{glm.diag.plots} for an example of the use of \code{glm.diag}. }
 
-\seealso{\code{\link{glm}},\code{\link{plot.glm.diag}},\code{\link{summary.glm}} }
+\seealso{\code{\link{glm}},\code{\link{lm}},\code{\link{plot.glm.diag}},\code{\link{summary.glm}} }
 \keyword{ misc }

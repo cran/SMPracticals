@@ -10,9 +10,9 @@ Makes plot of jackknife deviance residuals against linear predictor, normal scor
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{\code{glm.object} : the result of a call to \code{glm()} }
+  \item{x}{\code{glm.object} or \code{lm.object} : the result of a call to \code{glm()} or \code{lm()}}
   \item{glmdiag}{Diagnostics of \code{x} obtained from a call to \code{glm.diag}. If it is not supplied then it is calculated.}
-  \item{subset}{ Subset of \code{data} for which glm fitting performed: should be the same as the  \code{subset} option used in the call to \code{glm()} which generated \code{x}. Needed only if the \code{subset=} option was used in the call to \code{glm}. }
+  \item{subset}{ Subset of \code{data} for which glm fitting performed: should be the same as the  \code{subset} option used in the call to \code{glm()} or \code{lm()} which generated \code{x}. Needed only if the \code{subset=} option was used in the call to \code{glm} or \code{lm}. }
   \item{iden}{ A logical argument. If \code{TRUE} then, after the plots are drawn, the user will be prompted for an integer between 0 and 4. A positive integer will select a plot and invoke \code{identify()} on that plot. After exiting \code{identify()}, the user is again prompted, this loop continuing until the user responds to the prompt with 0. If \code{iden} is \code{FALSE} (default) the user cannot interact with the plots.}
   \item{labels}{A vector of labels for use with \code{identify()} if \code{iden} is \code{TRUE}. If it is not supplied then the labels are derived from \code{x}. }
   \item{ret}{A logical argument indicating if \code{glmdiag} should be returned. The default is \code{FALSE}.}
